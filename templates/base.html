@@ -7,7 +7,7 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<body class="theme-{{ current_theme|default:'light' }}">
+<body class="theme-{{ current_theme|default:'.theme-light' }}">
     <div class="container">
         <header>
             <h1><h1>🎵 {{ t.site_title }}</h1></h1>

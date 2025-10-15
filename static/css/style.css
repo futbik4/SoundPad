@@ -9,6 +9,17 @@
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
+.theme-light {
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --border-color: #e5e7eb;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
 .theme-dark {
     --primary-color: #8b5cf6;
     --primary-hover: #7c3aed;
