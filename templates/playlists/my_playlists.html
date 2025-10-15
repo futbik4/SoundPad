@@ -35,9 +35,7 @@
     </div>
     {% else %}
     <div class="empty-state">
-        <h3>🎵 {{ t.no_playlists }}</h3>
-        <p>{{ t.create_first_playlist }}</p>
-        <a href="{% url 'create_playlist' %}" class="btn-primary">{{ t.create_playlist }}</a>
+        <h5> {{ t.no_playlists }}</h5>
     </div>
     {% endif %}
 </div>

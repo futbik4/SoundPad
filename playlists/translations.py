@@ -29,7 +29,6 @@ TRANSLATIONS = {
         'play': 'Play',
         'edit': 'Edit',
         'no_playlists': 'No playlists yet',
-        'create_first_playlist': 'Create your first playlist to get started!',
     },
     'ru': {
         'create_playlist': 'Создать плейлист',
@@ -61,6 +60,5 @@ TRANSLATIONS = {
         'play': 'Воспроизвести',
         'edit': 'Редактировать',
         'no_playlists': 'Плейлистов пока нет',
-        'create_first_playlist': 'Создайте свой первый плейлист чтобы начать!',
     }
 }
