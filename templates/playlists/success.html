@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Успех - Playlist Creator{% endblock %}
+
+{% block content %}
+<div class="success-page">
+    <div class="success-icon">🎉</div>
+    <h2>Плейлист успешно создан!</h2>
+    <p>Ваши настройки сохранены в cookies и будут применяться при следующих посещениях.</p>
+    
+    {% if visit_history %}
+    <div class="visit-history">
+        <h3>История посещений:</h3>
+        <ul>
+            {% for visit in visit_history %}
+            <li>{{ visit.page }} - {{ visit.time }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+    
+    <a href="{% url 'create_playlist' %}" class="btn-secondary">Создать ещё один плейлист</a>
+</div>
+{% endblock %}

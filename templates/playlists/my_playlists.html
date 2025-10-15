@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ t.my_playlists }} - Playlist Creator{% endblock %}
+
+{% block content %}
+<div class="playlists-page">
+    <div class="page-header">
+        <h2>📁 {{ t.my_playlists }}</h2>
+        <a href="{% url 'create_playlist' %}" class="btn-primary">➕ {{ t.create_playlist }}</a>
+    </div>
+
+    {% if playlists %}
+    <div class="playlists-grid">
+        {% for playlist in playlists %}
+        <div class="playlist-card">
+            <div class="playlist-header">
+                <h3>{{ playlist.name }}</h3>
+                {% if playlist.is_public %}
+                <span class="public-badge">🌐 {{ t.public }}</span>
+                {% else %}
+                <span class="private-badge">🔒 {{ t.private }}</span>
+                {% endif %}
+            </div>
+            
+            {% if playlist.description %}
+            <p class="playlist-description">{{ playlist.description }}</p>
+            {% endif %}
+            
+            <div class="playlist-info">
+                <p><strong>{{ t.created }}:</strong> {{ playlist.created_at }}</p>
+            </div>
+            
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <h3>🎵 {{ t.no_playlists }}</h3>
+        <p>{{ t.create_first_playlist }}</p>
+        <a href="{% url 'create_playlist' %}" class="btn-primary">{{ t.create_playlist }}</a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
