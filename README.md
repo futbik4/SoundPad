@@ -15,8 +15,8 @@ Django веб-приложение для создания и управлени
 
 1. **Клонируйте репозиторий:**
 ```
-git clone <url-репозитория>
-cd music-playlist
+git clone <https://github.com/futbik4/SoundPad.git>
+cd SoundPad
 ```
 2. **Создайте виртуальное окружение:**
 ```
