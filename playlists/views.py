@@ -64,6 +64,7 @@ def clear_cookies(request):
     response.delete_cookie('language')
     response.delete_cookie('last_visited')
     response.delete_cookie('visit_history')
+    response.delete_cookie('playlists')
     return response
 
 def settings_page(request):
